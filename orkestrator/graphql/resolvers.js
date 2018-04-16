@@ -13,9 +13,12 @@ const resolvers = {
   },
   Mutation: {
     createMovie:  async (_, { input }) =>  {
-      console.log(input)
       const newMovie =  await axios.post('http://localhost:3001/movies',input)
       return newMovie.data.data
+    },
+    deleteMovie:  async (_, { id }) =>  {
+      const deletedMovie =  await axios.delete('http://localhost:3001/movies/' + id)
+      return deletedMovie.data.data
     }
   }
 }
