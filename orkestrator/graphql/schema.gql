@@ -1,0 +1,35 @@
+type Query { movies: [Movie], tvs: [ Tv ] }
+
+type Mutation {
+  # create new movie
+  createMovie(input: MovieInput): Movie
+}
+
+input MovieInput {
+  poster_path:  String,
+  overview: String,
+  title:   String,
+  popularity: Int,
+  tag: [String],
+  status: String
+
+}
+
+type Movie {
+  poster_path:  String,
+  overview: String,
+  title:   String,
+  popularity: Int,
+  tag: [String],
+  status: String
+}
+
+type Tv {
+  poster_path:  String,
+  overview: String,
+  title:   String,
+  popularity: Int,
+  tag: [String],
+  status: String
+}
+
