@@ -3,6 +3,7 @@ type Query { movies: [Movie], tvs: [ Tv ] }
 type Mutation {
   # create new movie
   createMovie(input: MovieInput): Movie
+  # delete movie
   deleteMovie(id: String!): Movie
 }
 
